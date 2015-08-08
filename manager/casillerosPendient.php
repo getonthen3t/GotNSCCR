@@ -1,88 +1,68 @@
 
-        <?php
+<?php
+include_once("cabecera.php");
+?>
 
-        include_once("cabecera.php");
-        ?>
+<div id="page-wrapper">
 
-        <div id="page-wrapper">
+    <div class="container-fluid">
 
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                           Casilleros pendientes por asignar.
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="admin.php"> Panel del Administraci&oacute;n</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-table"></i>  Casilleros pendientes
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-14">
-                        <h2>Clientes pendientes por casillero.</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Identificaci&oacute;n</th>
-                                        <th>Tipo Identificaci&oacute;n</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido 1</th>
-                                        <th>Apellido 2</th>
-                                        <th>Email</th>
-                                        <th>Tel1</th>
-                                        <th>Tel2</th>
-                                        <th>Provincia</th>
-                                        <th>Cant&oacute;n</th>
-                                        <th>Distrito</th>
-                                        <th>Otras Se&ntilde;as</th>
-                                        <th>Asignar</th>
-                                        <th>Descartar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                   <?php
-                                             $pendCasilleros = new casillerosPend();
-                                            echo $pendCasilleros->creaTablaPend();
-                                             
-                                   ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h2>www.smartcouriercr.com</h2>
-                        <p>Para contactar al desarrollador de este sitio por favor visite: <a target="_blank" href="http://getonthen3t.com">getonthen3t.com</a>.</p>
-                    </div>
-                </div>
-                <!-- /.row -->
-
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Casilleros pendientes por asignar.
+                </h1>
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php"> Panel del Administraci&oacute;n</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-table"></i>  Casilleros pendientes
+                    </li>
+                </ol>
             </div>
-            <!-- /.container-fluid -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-14">
+                <h2>Clientes pendientes por casillero.</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Identificaci&oacute;n</th>
+                                <th>Tipo Identificaci&oacute;n</th>
+                                <th>Nombre</th>
+                                <th>Apellido 1</th>
+                                <th>Apellido 2</th>
+                                <th>Email</th>
+                                <th>Tel1</th>
+                                <th>Tel2</th>
+                                <th>Provincia</th>
+                                <th>Cant&oacute;n</th>
+                                <th>Distrito</th>
+                                <th>Otras Se&ntilde;as</th>
+                                <th>Asignar</th>
+                                <th>Descartar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $pendCasilleros = new casillerosPend();
+                            echo $pendCasilleros->creaTablaPend();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
-        <!-- /#page-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<?php
+include_once("piePagina.php");
+?> 
 
 </body>
 
