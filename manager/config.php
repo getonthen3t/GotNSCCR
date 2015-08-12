@@ -13,6 +13,7 @@
 	//include the classes
         
         include_once (CLS_PATH . "/casillerosPend.php" );
+        include_once (CLS_PATH . "/admClientes.php" );
 	include_once( CLS_PATH . "/user.php" );
         include_once( CLS_PATH . "/sendEmail.php" );	
 ?>

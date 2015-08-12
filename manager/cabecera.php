@@ -159,18 +159,8 @@ echo $vUser_session; ?><b class="caret"></b></a>
                             <a href="casillerosPendient.php"><i class="fa fa-fw fa-table"></i> Casilleros Pendientes</a>
                         </li>
                         <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Mantenimientos de clientes <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
-                                <li>
-                                    <a href="#">Actualizar</a>
-                                </li>
-                                <li>
-                                    <a href="#">Consultar</a>
-                                </li>
-                                <li>
-                                    <a href="#">Crear</a>
-                                </li>
-                            </ul>
+                            <a href="admClientesPag.php"><i class="fa fa-fw fa-table"></i> Mantenimiento de Clientes </a>
+                            
                         </li>
                         <li>
                             <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Crea usuario Admin</a>

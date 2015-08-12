@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Esta clase es utilizada para obtener y modificar informacion con respecto a los casilleros pendientes, asignacion pendiente, conteo, entre otras
+ * Esta clase es utilizada para obtener y modificar informacion con respecto a los Clientes de SmartCourierCR
  *
- * @author alejandro sanchez 2015-08-01
+ * @author Juan Jara 2015-08-11
  */
-class casillerosPend {
+class admClientes {
 
-    public function cantidadCasillerosPend() { //retorna la cantidad de casilleros pendientes
+    public function cantidadClientes() { //retorna la cantidad de Clientes
         $cantidad = 0;
         $success = false;
         try {
             $con = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT COUNT(*) FROM TB_Clientes_Temp";
+            $sql = "SELECT COUNT(*) FROM TB_Clientes";
 
             $stmt = $con->prepare($sql);
             $stmt->bindValue(1, $cantidad, PDO::PARAM_INT);
@@ -31,20 +31,23 @@ class casillerosPend {
             return $cantidad;
         }
     }
+    
+    
 
-    public function creaTablaPend() { //Crea una tabla con los usuarios pendientes por asignar casilleros
+    public function creaTablaClientes() { //Crea una tabla con los Clientes Registrados
         $cantidad = 0;
         $success = false;
         try {
             $con = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT identificacion, tipo_identificacion,nombre, apellido1, apellido2, correo, tel1, tel2, provincia, canton,distrito,otras_senas  FROM TB_Clientes_Temp order by id_cliente desc";
+            $sql = "SELECT    TB_Casilleros.casillero,TB_Casilleros.id_cliente,TB_Clientes.id_cliente,TB_Clientes.identificacion, TB_Clientes.tipo_identificacion,TB_Clientes.nombre, TB_Clientes.apellido1, TB_Clientes.apellido2, TB_Clientes.correo, TB_Clientes.tel1, TB_Clientes.tel2, TB_Clientes.provincia, TB_Clientes.canton,TB_Clientes.distrito,TB_Clientes.otras_senas  FROM TB_Clientes JOIN TB_Casilleros ON TB_Clientes.id_cliente = TB_Casilleros.id_cliente";
 
             $stmt = $con->prepare($sql);
 
             $stmt->execute();
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<tr>';
+                echo '<td>' . $row['casillero'] . '</td>';
                 echo '<td>' . $row['identificacion'] . '</td>';
                 echo '<td>' . $row['tipo_identificacion'] . '</td>';
                 echo '<td>' . $row['nombre'] . '</td>';
@@ -68,19 +71,7 @@ class casillerosPend {
         }
     }
 
-    public function alertas($cantidadCasilleros) {
-        
-        try {
-            if ($cantidadCasilleros == 0) {
-                echo '<li><a href="casillerosPendient.php">Casilleros Pend&nbsp;<span class="label label-success">' . $cantidadCasilleros . '</span></a></li>';
-            } else if ($cantidadCasilleros <= 5) {
-                echo '<li><a href="casillerosPendient.php">Casilleros Pend&nbsp;<span class="label label-warning">' . $cantidadCasilleros . '</span></a></li>';
-            } else if ($cantidadCasilleros >= 6) {
-                echo '<li><a href="casillerosPendient.php">Casilleros Pend&nbsp;<span class="label label-danger">' . $cantidadCasilleros . '</span></a></li>';
-            }
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
+    
 
 }
+
