@@ -11,5 +11,6 @@
 	//include the classes
 	include_once( CLS_PATH . "/Suscripcion.php" );
 	include_once( CLS_PATH . "/enviaEmail.php" );
+        
 
 ?>

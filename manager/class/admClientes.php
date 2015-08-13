@@ -42,6 +42,8 @@ class admClientes {
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "SELECT    TB_Casilleros.casillero,TB_Casilleros.id_cliente,TB_Clientes.id_cliente,TB_Clientes.identificacion, TB_Clientes.tipo_identificacion,TB_Clientes.nombre, TB_Clientes.apellido1, TB_Clientes.apellido2, TB_Clientes.correo, TB_Clientes.tel1, TB_Clientes.tel2, TB_Clientes.provincia, TB_Clientes.canton,TB_Clientes.distrito,TB_Clientes.otras_senas  FROM TB_Clientes JOIN TB_Casilleros ON TB_Clientes.id_cliente = TB_Casilleros.id_cliente";
 
+            
+            
             $stmt = $con->prepare($sql);
 
             $stmt->execute();
@@ -60,7 +62,7 @@ class admClientes {
                 echo '<td>' . $row['canton'] . '</td>';
                 echo '<td>' . $row['distrito'] . '</td>';
                 echo '<td>'. $row['otras_senas'] .'</td>';
-                echo '<td><a><button type="button" class="btn btn-lg btn-success">Actualizar</button></a></td>';
+                echo '<td><a href="obtenerDatosCliente.php?usu='.$row['id_cliente'].'"><button type="button" class="btn btn-lg btn-success">Actualizar</button></a></td>';
                 echo "<td><a><button type='button' class='btn btn-lg btn-danger' onclick='return confirm(\" &iquest Esta seguro que desea eliminar el registro ?\")'>Eliminar</button></a></td>";
                 echo '</tr>';
             }
@@ -69,6 +71,8 @@ class admClientes {
             echo $e->getMessage();
             return $cantidad;
         }
+        
+        //echo '<td><a href="../suscripcionActualizacion.php?usu='.$row['id_cliente'].'&identificacion='.$row['identificacion'].'&tipoIdentificacion='.$row['tipo_identificacion'].'&nombre='.$row['nombre'].'&apellido1='.$row['apellido1'].'&apellido2='.$row['apellido2'].'&correo='.$row['correo'].'&tel1='.$row['tel1'].'&tel2='.$row['tel2'].'&provincia='.$row['provincia'].'&canton='.$row['canton'].'&distrito='.$row['distrito'].'&otrasSenas='.$row['otras_senas'].'"><button type="button" class="btn btn-lg btn-success">Actualizar</button></a></td>';
     }
 
     
