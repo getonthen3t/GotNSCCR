@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /**
  * Esta clase es utilizada para obtener y modificar informacion con respecto a los casilleros pendientes, asignacion pendiente, conteo, entre otras
@@ -6,6 +6,7 @@
  * @author alejandro sanchez 2015-08-01
  */
 class casillerosPend {
+    
 
     public function cantidadCasillerosPend() { //retorna la cantidad de casilleros pendientes
         $cantidad = 0;
@@ -38,11 +39,14 @@ class casillerosPend {
         try {
             $con = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT identificacion, tipo_identificacion,nombre, apellido1, apellido2, correo, tel1, tel2, provincia, canton,distrito,otras_senas  FROM TB_Clientes_Temp order by id_cliente desc";
+            $sql = "SELECT id_cliente,identificacion, tipo_identificacion,nombre, apellido1, apellido2, correo, tel1, tel2, provincia, canton,distrito,otras_senas  FROM TB_Clientes_Temp order by id_cliente desc";
 
             $stmt = $con->prepare($sql);
 
             $stmt->execute();
+            $msj=null;
+            $msj='"Esta seguro que desea eliminar?"';
+                   
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<tr>';
                 echo '<td>' . $row['identificacion'] . '</td>';
@@ -57,8 +61,8 @@ class casillerosPend {
                 echo '<td>' . $row['canton'] . '</td>';
                 echo '<td>' . $row['distrito'] . '</td>';
                 echo '<td>' . $row['otras_senas'] . '</td>';
-                echo '<td><button type="button" class="btn btn-lg btn-success">Asignar</button></td>';
-                echo '<td><button type="button" class="btn btn-lg btn-danger">Eliminar</button></td>';
+                echo '<td><button type="button" class="btn btn-lg btn-success"  >Asignar</button></td>';
+                echo '<td><a href="eliminaTemp.php?usu='.$row['id_cliente'].'"><button type="button" onclick="return confirm()" class="btn btn-lg btn-danger" >Eliminar</button></a></td>';
                 echo '</tr>';
             }
             $con = null;
@@ -82,5 +86,6 @@ class casillerosPend {
             echo $e->getMessage();
         }
     }
+    
 
 }

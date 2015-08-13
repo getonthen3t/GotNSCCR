@@ -50,6 +50,7 @@ include_once("cabecera.php");
                         </thead>
                         <tbody>
                             <?php
+                               
                                 $admClientes = new admClientes();
                                 echo $admClientes->creaTablaClientes();
                             ?>
