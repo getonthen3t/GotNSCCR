@@ -7,10 +7,7 @@ if (empty($_SESSION['user_session'])) {
 }
 include_once("config.php");
 ?> 
-<?php
-$email = new sendEmail();
-echo $email->enviaEmail('getonthen3t@gmail.com','getonthen3t@gmail.com','info','testing','Esto es una prueba de email automatico');
-?> 
+
 <html lang="en">
 
     <head>
