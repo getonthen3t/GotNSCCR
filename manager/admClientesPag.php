@@ -35,11 +35,11 @@ include_once("cabecera.php");
                                 <th>Identificaci&oacute;n</th>
                                 <th>Tipo Identificaci&oacute;n</th>
                                 <th>Nombre</th>
-                                <th>Apellido 1</th>
-                                <th>Apellido 2</th>
+                                <th>1er Apellido</th>
+                                <th>2do Apellido</th>
                                 <th>Email</th>
-                                <th>Tel1</th>
-                                <th>Tel2</th>
+                                <th>Telefono</th>
+                                <th>Telefono</th>
                                 <th>Provincia</th>
                                 <th>Cant&oacute;n</th>
                                 <th>Distrito</th>
