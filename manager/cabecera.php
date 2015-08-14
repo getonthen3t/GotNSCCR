@@ -17,7 +17,7 @@ include_once("config.php");
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-
+        <script src="js/jquery-1.11.3.min.js"></script>
         <title>SCCR+ Admin</title>
 
         <!-- Bootstrap Core CSS -->
@@ -31,7 +31,8 @@ include_once("config.php");
 
         <!-- Custom Fonts -->
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+        <link href="css/tabla.css" rel="stylesheet">
+        <script src="js/tabla.js"></script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

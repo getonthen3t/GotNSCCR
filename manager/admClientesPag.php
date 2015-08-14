@@ -28,13 +28,8 @@ $(document).ready(function() {
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
 
-        <div class="row">
-            <div class="col-lg-14">
-                <h2>Tabla de Clientes Activos.</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+                   <table id="example" class="display" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Casillero</th>
@@ -62,10 +57,8 @@ $(document).ready(function() {
                             ?>
                         </tbody>
                     </table>
-                </div>
-            </div>
-
         </div>
+    
     </div>
 <?php
 include_once("piePagina.php");
