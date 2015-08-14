@@ -2,7 +2,7 @@
 	include_once("config.php");
         
 ?>
-<?php if( !(isset( $_POST['Registrar'] ) ) ) { ?>
+<?php if( !(isset( $_POST['Actualizar'] ) ) ) { ?>
 
 <!DOCTYPE html>
 <!--
@@ -137,7 +137,7 @@ and open the template in the editor.
                             <form action="" method="post" class="login">
 				<div class="form">
 				   <div class="six columns noleftmargin">
-                                       <?php $_GET["idCliente"]; ?>
+                                       <input type="hidden" name="vidCliente" value="<?php $_GET["idCliente"]; ?>"/> 
                                         <label>Tipo de Identificaci&oacute;n</label>
                                         <select id="vTipoIdentificacion" name="vTipoIdentificacion" type="text" onchange="validarIdentificacion();">
                                             <option value="<?php $_GET["tipoIdentificacion"]; ?>"><?php echo $_GET["tipoIdentificacion"];?></option>
@@ -197,16 +197,16 @@ and open the template in the editor.
                                  <div class="six columns noleftmargin" >
                                         <label>Cantón </label>
                                         <div id="divCanton">
-                                            <select type="text" name="vCanton" id="vCanton" value="<?php echo $_GET["canton"]; ?>" >
-                                            
+                                            <select type="text" name="vCanton" id="vCanton" >
+                                                    <option value="<?php echo $_GET["canton"]; ?>"><?php echo $_GET["canton"]; ?></option>
                                             </select>
                                         </div>
 				</div>
                                      <div class="six columns noleftmargin">
                                        <br><label>Distrito </label>
                                        <div id="divDistrito">
-                                            <select type="text" name="vDistrito" id="vDistrito" value="<?php echo $_GET["distrito"]; ?>">
-                                            
+                                            <select type="text" name="vDistrito" id="vDistrito" >
+                                                <option value="<?php echo $_GET["distrito"]; ?>"><?php echo $_GET["distrito"]; ?></option>
                                             </select>
                                        </div>
 				</div>

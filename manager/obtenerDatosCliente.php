@@ -35,7 +35,7 @@ try {
                 $otrasSenas = $row['otras_senas'];
             }
             
-            header("Location:../suscripcionActualizacion.php?idCliente=$idCliente&usr=$identificacion&tipoIdentificacion=$tipoIdentificacion&nombre=$nombre&apellido1=$apellido1&apellido2=$apellido2&correo=$correo&tel1=$tel1&tel2=$tel2&provincia=$provincia&canton=$canton&distrito=$distrito&otrasSenas=$otrasSenas");
+            header("Location:actualizacionClientes.php?idCliente=$idCliente&usr=$identificacion&tipoIdentificacion=$tipoIdentificacion&nombre=$nombre&apellido1=$apellido1&apellido2=$apellido2&correo=$correo&tel1=$tel1&tel2=$tel2&provincia=$provincia&canton=$canton&distrito=$distrito&otrasSenas=$otrasSenas");
             $con = null;
         } catch (PDOException $e) {
             echo $e->getMessage();
