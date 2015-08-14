@@ -48,7 +48,7 @@ class admClientes {
 
             $stmt->execute();
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo '<tr>';
+                echo '<tr class="gradeX">';
                 echo '<td>' . $row['casillero'] . '</td>';
                 echo '<td>' . $row['identificacion'] . '</td>';
                 echo '<td>' . $row['tipo_identificacion'] . '</td>';

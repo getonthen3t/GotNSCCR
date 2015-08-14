@@ -16,7 +16,7 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-<script src="js/jquery.js"></script>
+<script src="css/datatables/media/js/jquery.dataTables.min.js"></script>
 
 <!-- Morris Charts JavaScript -->
 <script src="js/plugins/morris/raphael.min.js"></script>

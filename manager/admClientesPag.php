@@ -1,7 +1,13 @@
 <?php
 include_once("cabecera.php");
 ?>
-
+<script>
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+</script>
 <div id="page-wrapper">
 
     <div class="container-fluid">
