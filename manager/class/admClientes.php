@@ -40,7 +40,7 @@ class admClientes {
         try {
             $con = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
             $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT    TB_Casilleros.casillero,TB_Casilleros.id_cliente,TB_Clientes.id_cliente,TB_Clientes.identificacion, TB_Clientes.tipo_identificacion,TB_Clientes.nombre, TB_Clientes.apellido1, TB_Clientes.apellido2, TB_Clientes.correo, TB_Clientes.tel1, TB_Clientes.tel2, TB_Clientes.provincia, TB_Clientes.canton,TB_Clientes.distrito,TB_Clientes.otras_senas  FROM TB_Clientes JOIN TB_Casilleros ON TB_Clientes.id_cliente = TB_Casilleros.id_cliente";
+            $sql = "SELECT    TB_Casilleros.casillero,TB_Casilleros.id_cliente,TB_Clientes.id_cliente,TB_Clientes.identificacion, TB_Clientes.tipo_identificacion,TB_Clientes.nombre, TB_Clientes.apellido1, TB_Clientes.apellido2, TB_Clientes.correo, TB_Clientes.tel1, TB_Clientes.tel2, TB_Clientes.provincia, TB_Clientes.canton,TB_Clientes.distrito,TB_Clientes.otras_senas  FROM TB_Clientes JOIN TB_Casilleros ON TB_Clientes.id_cliente = TB_Casilleros.id_cliente order by TB_Casilleros.id_cliente desc";
 
             
             

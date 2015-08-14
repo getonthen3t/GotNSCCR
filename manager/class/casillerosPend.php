@@ -45,7 +45,7 @@ class casillerosPend {
 
             $stmt->execute();
             $msj=null;
-            $msj='"Esta seguro que desea eliminar?"';
+            $msj='Esta seguro que desea eliminar?';
                    
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo '<tr>';
@@ -61,7 +61,7 @@ class casillerosPend {
                 echo '<td>' . $row['canton'] . '</td>';
                 echo '<td>' . $row['distrito'] . '</td>';
                 echo '<td>' . $row['otras_senas'] . '</td>';
-                echo '<td><button type="button" class="btn btn-lg btn-success"  >Asignar</button></td>';
+                echo '<td><a href="asignaCasillero.php?usu='.$row['id_cliente'].'"><button type="button" class="btn btn-lg btn-success" onclick="return confirm()" >Asignar</button></a></td>';
                 echo '<td><a href="eliminaTemp.php?usu='.$row['id_cliente'].'"><button type="button" onclick="return confirm()" class="btn btn-lg btn-danger" >Eliminar</button></a></td>';
                 echo '</tr>';
             }
