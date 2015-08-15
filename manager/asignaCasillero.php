@@ -35,9 +35,18 @@ try {
     $sql = "DELETE FROM TB_Clientes_Temp WHERE id_cliente=" . $_GET['usu'];
     $stmt = $con->prepare($sql);
     $stmt->execute();
-    $con = null;
+    //----------Buscando nuevo id de cliente-----------------------
+    $sql = "SELECT id_cliente TB_Clientes where identificacion = " . $identificacion;
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        $idCli = $row['id_cliente'];
+    }  
+    //--------------------------------
+    
     //header("Location:admClientesPag.php");
-    $sql = "SELECT casillero TB_Casilleros where id_cliente = " . $_GET['usu'];
+    $sql = "SELECT casillero TB_Casilleros where id_cliente = " . $idCli;
     $stmt = $con->prepare($sql);
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -47,7 +56,7 @@ try {
     $nomComplero = $nombre.' '.$apellido1.' '.$apellido2;
         header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
 
-    
+    $con = null;
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
