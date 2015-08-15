@@ -36,7 +36,7 @@ try {
     $stmt = $con->prepare($sql);
     $stmt->execute();
     //----------Buscando nuevo id de cliente-----------------------
-    $sql = "SELECT id_cliente TB_Clientes where identificacion =$identificacion";
+    $sql = "SELECT id_cliente TB_Clientes where identificacion ='$identificacion'";
     $stmt = $con->prepare($sql);
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
