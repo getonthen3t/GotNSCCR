@@ -20,7 +20,7 @@ include_once("config.php");
             
             $stmt = $con->prepare($sql);
             $stmt->execute();
-            header("Location:actualizacionClientes.php");
+            header("Location:admClientesPag.php");
         } catch (PDOException $e) {
              echo $e->getMessage();
  }     

@@ -63,7 +63,7 @@ class admClientes {
                 echo '<td>' . $row['distrito'] . '</td>';
                 echo '<td>'. $row['otras_senas'] .'</td>';
                 echo '<td><a href="obtenerDatosCliente.php?usu='.$row['id_cliente'].'"><button type="button" class="btn btn-lg btn-success">Actualizar</button></a></td>';
-                echo "<td><a><button type='button' class='btn btn-lg btn-danger' onclick='return confirm(\" &iquest Esta seguro que desea eliminar el registro ?\")'>Eliminar</button></a></td>";
+                //echo "<td><a><button type='button' class='btn btn-lg btn-danger' onclick='return confirm(\" &iquest Esta seguro que desea eliminar el registro ?\")'>Eliminar</button></a></td>";
                 echo '</tr>';
             }
             $con = null;
