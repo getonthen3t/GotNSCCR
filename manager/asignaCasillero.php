@@ -52,7 +52,7 @@ try {
     $casillero = $stmt->fetchColumn();
     //--------------------------------
 
-    $nomComplero = $nombre . ' ' . $apellido1 . ' ' . $apellido2;
+        $nomComplero = $nombre . ' ' . $apellido1 . ' ' . $apellido2;
     header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
 
     $con = null;
