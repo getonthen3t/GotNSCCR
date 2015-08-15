@@ -32,16 +32,23 @@ try {
             VALUES('$identificacion','$tipoIdentificacion','$nombre','$apellido1','$apellido2','$correo','$tel1','$tel2','$provincia','$canton','$distrito','$otrasSenas')";
     $stmt = $con->prepare($sql);
     $stmt->execute();
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
-
-try {
     $sql = "DELETE FROM TB_Clientes_Temp WHERE id_cliente=" . $_GET['usu'];
     $stmt = $con->prepare($sql);
     $stmt->execute();
-    $con=null;
-    header("Location:admClientesPag.php");
+    $con = null;
+    //header("Location:admClientesPag.php");
+    $sql = "SELECT casillero TB_Casilleros where id_cliente = " . $_GET['usu'];
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        $casillero = $row['casillero'];
+    }
+    $nomComplero = $nombre.' '.$apellido1.' '.$apellido2;
+        header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
+
+    
 } catch (PDOException $e) {
     echo $e->getMessage();
-}     
+}
+   

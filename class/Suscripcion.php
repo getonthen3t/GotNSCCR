@@ -57,28 +57,17 @@ class Suscripcion {
                                 
 				
 				$stmt->execute();
-                              /*  $msj="<h1>Gracias por suscribirse a SmartCourierCR!</h1><br><br> <h3>Estamos procesando su información, se le estará; notificando para confirmar su registro.</h3>";
-				$to = 'info@smartcouriercr.com';	
-	//sender - from the form
-/*	$from = vnombre . ' <' . vEmail . '>';
-	
-	//subject and the html message
-	$subject = 'Suscripcion de  ' . vnombre. ' '.vApellido1;	
-	$message = 'Solicitud de suscripcion <br/><br/>Identificacion:' . videntificacion . '<br/><br/>
-		       Nombre: ' . vnombre . '<br/><br/>		
-                       Primer apellido: ' . vApellido1 . '<br/><br/>
-                       Segundo apellido: ' . vApellido2 . '<br/><br/>
-                       Telefono: ' . vTel . '<br/><br/>
-		       Direccion: ' . nl2br(vDireccion) . '<br/><br/>.
-                       Numero de Casillero [pendiente]';
-                                send($to, $subject, $message, $from); */
+                                header("Location:enviaEmailSuscripcion.php?email=".$this->vEmail);
+                                
 			}catch( PDOException $e ) {
                                 echo $e->getMessage();
 				$msj="<h1>Ups! Ah ocurrido un error en su registro.</h1><br><br> <h3>Puede que su identificación ya este registrada en SmartCourierCR, si es así por favor contacte a servicio al cliente.</h3>";
-			}
+                                header("Location:suscripcion2.php?mensaje=".$msj);
+                                
+                        }
                         
                         
-                        header("Location:suscripcion2.php?mensaje=".$msj);
+                        
 	 }
         
          function send($to, $subject, $message, $from) {
