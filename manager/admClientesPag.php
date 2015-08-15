@@ -2,11 +2,11 @@
 include_once("cabecera.php");
 ?>
 <script>
-$(document).ready(function() {
-    $('#example').DataTable( {
-        "pagingType": "full_numbers"
-    } );
-} );
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "pagingType": "full_numbers"
+        });
+    });
 </script>
 <div id="page-wrapper">
 
@@ -28,8 +28,10 @@ $(document).ready(function() {
                 </ol>
             </div>
         </div>
-
-                   <table id="example" class="display" width="100%" cellspacing="0">
+        <div class="row">
+            <div class="col-lg-14">
+                <div class="table-responsive">
+                    <table id="example" class="able table-bordered table-hover " width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Casillero</th>
@@ -46,23 +48,24 @@ $(document).ready(function() {
                                 <th>Distrito</th>
                                 <th>Otras Se&ntilde;as</th>
                                 <th>Actualizar</th>
-                                <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                               
-                                $admClientes = new admClientes();
-                                echo $admClientes->creaTablaClientes();
+                            $admClientes = new admClientes();
+                            echo $admClientes->creaTablaClientes();
                             ?>
                         </tbody>
                     </table>
+                </div>
+            </div>
         </div>
-    
+
+
     </div>
-<?php
-include_once("piePagina.php");
-?> 
+    <?php
+    include_once("piePagina.php");
+    ?> 
 
 </body>
 
