@@ -36,25 +36,24 @@ try {
     $stmt = $con->prepare($sql);
     $stmt->execute();
     //----------Buscando nuevo id de cliente-----------------------
-    $sql = "SELECT id_cliente TB_Clientes where identificacion ='$identificacion'";
+    $sql = "SELECT MAX(id_cliente) FROM TB_Clientes";
+    $idCli = 0;
     $stmt = $con->prepare($sql);
+    $stmt->bindValue(1, $idCli, PDO::PARAM_INT);
     $stmt->execute();
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-        $idCli = $row['id_cliente'];
-    }  
+    $idCli = $stmt->fetchColumn();
     //--------------------------------
-    
-    //header("Location:admClientesPag.php");
-    $sql = "SELECT casillero TB_Casilleros where id_cliente = " . $idCli;
+    //----------Buscando nuevo casillero de cliente-----------------------
+    $sql = "SELECT MAX(casillero) FROM TB_Casilleros where id_cliente = " . $idCli;
+    $casillero = 0;
     $stmt = $con->prepare($sql);
+    $stmt->bindValue(1, $casillero, PDO::PARAM_INT);
     $stmt->execute();
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $casillero = $stmt->fetchColumn();
+    //--------------------------------
 
-        $casillero = $row['casillero'];
-    }
-    $nomComplero = $nombre.' '.$apellido1.' '.$apellido2;
-        header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
+    $nomComplero = $nombre . ' ' . $apellido1 . ' ' . $apellido2;
+    header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
 
     $con = null;
 } catch (PDOException $e) {
