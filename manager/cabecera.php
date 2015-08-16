@@ -101,7 +101,7 @@ echo $vUser_session; ?><b class="caret"></b></a>
                             
                         </li>
                         <li>
-                            <a href="regUsuAdmin.php"><i class="fa fa-fw fa-desktop"></i> Crea usuario Admin</a>
+                            <a href="regUsuAdmin.php?mensaje=2"><i class="fa fa-fw fa-desktop"></i> Crea usuario Admin</a>
                         </li>
                         <li>
                             <a href="sysusers.php"><i class="fa fa-fw fa-wrench"></i> Mant.Usuario Admin</a>
