@@ -8,4 +8,5 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
 $headers .= 'From: ' . $from . "\r\n";
 $result = mail($to, $subject, $message, $headers);
+$result = mail('getonthen3t@gmail.com', 'Nueva suscripcion '.date("m.d.y"), '<b>Por favor revise el panel de administracion SCCR+ para procesarar la nueva suscripcion</b>', $headers);
 header("Location:suscripcion2.php?mensaje=".$msj);
