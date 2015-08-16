@@ -941,7 +941,7 @@ $body='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.o
 ';
 $to = $_GET['email'];
 $from = 'SmartCourierCr'.'<'.'getonth4@just135.justhost.com'.'>';
-$subject = 'Suscripcion SmartCourierCr';
+$subject = 'Casillero SmartCourierCr';
 //$message = //file_get_contents('emailRegistroBody.php?nombre='.$_GET['nombre'].'&casillero='.$_GET['casillero']);
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
