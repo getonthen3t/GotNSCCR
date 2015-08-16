@@ -66,7 +66,7 @@
 	$usr->storeFormValues( $_POST );
 	
 	if( $usr->userLogin() ) {
-		echo header( "refresh:0;url=admin.php" );
+		echo '<script> window.location.replace("../manager/admin.php")</script>';
 	} else {
 		echo "Incorrect Username/Password";	
 	}

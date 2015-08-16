@@ -7,8 +7,9 @@
  }catch (Exception $e) {
     echo 'Excepción capturada: ',  $e->getMessage(), "\n";
 } finally {
-    header("Location:index.php");   
+    echo '<script> window.location.replace("../manager/index.php")</script>';  
+     
 }
- header("Location:index.php");   
+ echo '<script> window.location.replace("../manager/index.php")</script>';     
  
 

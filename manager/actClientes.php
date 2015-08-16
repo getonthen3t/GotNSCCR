@@ -20,7 +20,7 @@ include_once("config.php");
             
             $stmt = $con->prepare($sql);
             $stmt->execute();
-            header("Location:admClientesPag.php");
+            echo '<script> window.location.replace("../manager/admClientesPag.php")</script>';
         } catch (PDOException $e) {
              echo $e->getMessage();
  }     

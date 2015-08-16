@@ -60,7 +60,32 @@
 				return $e->getMessage();
 			}
 	 }
-         
+       public function creaTablaUsers() { //Crea una tabla con los usuarios pendientes por asignar casilleros
+        $cantidad = 0;
+        $success = false;
+        try {
+            $con = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+            $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "SELECT username, userID  FROM users";
+
+            $stmt = $con->prepare($sql);
+
+            $stmt->execute();
+            $msj=null;
+            $msj='Esta seguro que desea eliminar?';
+                   
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                echo '<tr>';
+                echo '<td>' . $row['username'] . '</td>';
+                echo '<td><a href="eliminaUser.php?user='.$row['userID'].'"><button type="button" onclick="return confirm()" class="btn btn-lg btn-danger" >Eliminar</button></a></td>';
+                echo '</tr>';
+            }
+            $con = null;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            return $cantidad;
+        }
+    }   
          
          
           

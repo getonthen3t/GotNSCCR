@@ -53,7 +53,7 @@ try {
     //--------------------------------
 
         $nomComplero = $nombre . ' ' . $apellido1 . ' ' . $apellido2;
-    header("Location:enviaEmailRegistro.php?nombre=$nomComplero&casillero=$casillero");
+    echo '<script> window.location.replace("../manager/enviaEmailRegistro.php?email='.$correo.'&nombre='.$nomComplero.'&casillero='.$casillero.'")</script>';    
 
     $con = null;
 } catch (PDOException $e) {

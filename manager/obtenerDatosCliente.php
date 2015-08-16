@@ -34,8 +34,7 @@ try {
                 $distrito= $row['distrito'] ;
                 $otrasSenas = $row['otras_senas'];
             }
-            
-            header("Location:actualizacionClientes.php?idCliente=$idCliente&usr=$identificacion&tipoIdentificacion=$tipoIdentificacion&nombre=$nombre&apellido1=$apellido1&apellido2=$apellido2&correo=$correo&tel1=$tel1&tel2=$tel2&provincia=$provincia&canton=$canton&distrito=$distrito&otrasSenas=$otrasSenas");
+            echo '<script> window.location.replace("../manager/actualizacionClientes.php?idCliente='.$idCliente.'&usr='.$identificacion.'&tipoIdentificacion='.$tipoIdentificacion.'&nombre='.$nombre.'&apellido1='.$apellido1.'&apellido2='.$apellido2.'&correo='.$correo.'&tel1='.$tel1.'&tel2='.$tel2.'&provincia='.$provincia.'&canton='.$canton.'&distrito='.$distrito.'&otrasSenas='.$otrasSenas.'")</script>';
             $con = null;
         } catch (PDOException $e) {
             echo $e->getMessage();
