@@ -26,6 +26,14 @@ include_once("cabecera.php");
         <!-- /.row -->
 
         <div class="row">
+         
+            <?php  
+            if($_GET['mensaje']==1){
+            echo '<div class="alert alert-warning">
+                    <strong>ERROR!</strong> El cliente ya se encuentra registrado, por favor notificarle por correo electronico su numero de casillero.
+            </div>';
+            }
+            ?>
             <div class="col-lg-14">
                 <h2>Clientes pendientes por casillero.</h2>
                 <div class="table-responsive">

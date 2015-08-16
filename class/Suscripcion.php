@@ -61,7 +61,7 @@ class Suscripcion {
                                 
 			}catch( PDOException $e ) {
                                 echo $e->getMessage();
-				$msj="<h1>Ups! Ah ocurrido un error en su registro.</h1><br><br> <h3>Puede que su identificación ya este registrada en SmartCourierCR, si es así por favor contacte a servicio al cliente.</h3>";
+				$msj="<h1>Ups! Ah ocurrido un error en su registro.</h1><br><br> <h3>Puede que su identificación ya este registrada en SmartCourierCR, si es así por favor contacte a servicio al cliente o al correo info@smartcouriercr.com.</h3>";
                                 header("Location:suscripcion2.php?mensaje=".$msj);
                                 
                         }

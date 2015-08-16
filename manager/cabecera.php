@@ -94,7 +94,7 @@ echo $vUser_session; ?><b class="caret"></b></a>
                             <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i>  Panel del Administraci&oacute;n</a>
                         </li> 
                         <li>
-                            <a href="casillerosPendient.php"><i class="fa fa-fw fa-table"></i> Casilleros Pendientes</a>
+                            <a href="casillerosPendient.php?mensaje=2"><i class="fa fa-fw fa-table"></i> Casilleros Pendientes</a>
                         </li>
                         <li>
                             <a href="admClientesPag.php"><i class="fa fa-fw fa-table"></i> Mantenimiento de Clientes </a>

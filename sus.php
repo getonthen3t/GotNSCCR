@@ -47,7 +47,7 @@ if (!$errors) {
 	//send the mail
 	
         
-        $msj="<h1>Gracias por suscribirse a SmartCourierCR!</h1><br><br> <h3>Estamos procesando su informaci&oacute;n, se le estar&aacute; notificando para confirmar su registro.</h3>";
+        $msj="<h1>Gracias por suscribirse a SmartCourierCR!</h1><br><br> <h3>Estamos procesando su informaci&oacute;n, se le estar&aacute notificando para confirmar su registro.</h3>";
         
 	$sql ="INSERT INTO Users (N_Identificacion,Nombre,Apellido1,Apellido2,email,telefono,direccion,casillero) values ('$identificacion','$nombre','$apellido1','$apellido2','$email',$tel,'$direccion',$casillero)";
         if(!mysql_query($sql)){

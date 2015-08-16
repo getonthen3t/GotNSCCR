@@ -26,9 +26,9 @@
 	<div class="row">
 		<div class="twelve columns">
 			<img src="images/info.png" class="pics" alt="info">
-			<div class="infotext">
+			
 				Gracias por visitar SmartCourierCr, su mejor opci&oacute;n.
-			</div>
+			
 		</div>
 	</div>
 </div>

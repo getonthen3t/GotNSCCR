@@ -57,6 +57,12 @@ try {
 
     $con = null;
 } catch (PDOException $e) {
-    echo $e->getMessage();
+    //echo $e->getMessage();
+    
+    $msj= 1;
+   // $msj="<div class='alert alert-warning'>
+     //                Best check yo self, you're not looking too good.
+      //          </div><h1>ERROR existe un duplicado del Cliente, verificar.</h1>";
+     echo '<script> window.location.replace("../manager/casillerosPendient.php?mensaje='.$msj.'")</script>';
 }
    
