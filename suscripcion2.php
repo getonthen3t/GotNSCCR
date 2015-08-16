@@ -67,7 +67,7 @@
 					</li>
 					
 					<li>
-					<a href="suscripcion.html">Suscripci&oacute;n gratuita!</a>
+					<a href="suscripcion.php">Suscripci&oacute;n gratuita!</a>
 						
 					</li>
 					

@@ -112,101 +112,101 @@ function cambiaDistrito(){
     
     var comboNuevo = "<select type='text' name='vDistrito' id='vDistrito'>";
     var distritosSanJose = ["Carmen","Merced","Hospital","Catedral","Zapote","San Francisco de dos Ríos","Uruca","Mata Redonda","Pavas","Hatillo","San Sebastían"];
-    var distritosEscazu = ["Escazú","San Antonio","San Rafael"];
-    var distritosDesamparados = ["Desamparados","San Miguel","San Juan de Dios","San Rafael Arriba","San Antonio","Frailes","Patarrá","San Cristobal","Rosario","Damas","San Rafael"];
-    var distritosSanJosePuriscal = ["Santiago","Mercedes Sur","Barbacoas","Grifo Alto","San Rafael","Candelarita","Desamparaditos","San Antonio","Chires"];
-    var distritosSanJoseTarrazu = ["San Marcos","San Lorenzo","San Carlos"];
-    var distritosSanJoseAserri = ["Tarbaca","Aserrí","Vuelta de Jorco","San Gabriel","Legua","Monterrey","Salitrillos"];
-    var distritosSanJoseMora = ["Ciudad\bColon","Guayabo","Tabarcia","Piedras Negras","Picagres"];
-    var distritosSanJoseGoicoechea = ["Guadalupe","San Francisco","Calle Blancos","Mata de Platano","Ipís","Rancho Redondo","Purral"];
-    var distritosSanJoseSantaAna = ["Santa Ana","Salitral","Pozos","Uruca","Piedades","Brasil"];
-    var distritosSanJoseAlajuelita = ["Alajuelita","San Josecito","San Antonio","Concepción","San Felipe"];
-    var distritosSanJoseVazquez = ["San Isidro","San Rafael","Dulce Nombre de Jesús","Patalillo","Cascajal"];
-    var distritosSanJoseAcosta = ["San Ignacio","Guaitil","Palmichal","Cangrejal","Sabanillas"];
-    var distritosSanJoseTibas = ["San Juan","Cinco Esquinas","Anselmo Llorente","Leon XIII","Colima"];
-    var distritosSanJoseMoravia = ["San Vicente","San Jerónimo","Trinidad"];
-    var distritosSanJoseMontesdeOca = ["San Pedro","Sabanilla","Mercedes","San Rafael"];
-    var distritosSanJoseTurrubares = ["San Pablo","San Pedro","San Juan de Mata","San Luis","Carara"];
-    var distritosSanJoseDota = ["Santa María","Jardín","Copey"];
+    var distritosEscazu = ["Escazú","San\bAntonio","San\bRafael"];
+    var distritosDesamparados = ["Desamparados","San\bMiguel","San\bJuan\bde\bDios","San\bRafael\bArriba","San\bAntonio","Frailes","Patarrá","San\bCristobal","Rosario","Damas","San\bRafael"];
+    var distritosSanJosePuriscal = ["Santiago","Mercedes\bSur","Barbacoas","Grifo\bAlto","San\bRafael","Candelarita","Desamparaditos","San\bAntonio","Chires"];
+    var distritosSanJoseTarrazu = ["San\bMarcos","San\bLorenzo","San\bCarlos"];
+    var distritosSanJoseAserri = ["Tarbaca","Aserrí","Vuelta\bde\bJorco","San\bGabriel","Legua","Monterrey","Salitrillos"];
+    var distritosSanJoseMora = ["Ciudad\bColon","Guayabo","Tabarcia","Piedras\bNegras","Picagres"];
+    var distritosSanJoseGoicoechea = ["Guadalupe","San\bFrancisco","Calle\bBlancos","Mata\bde\bPlatano","Ipís","Rancho\bRedondo","Purral"];
+    var distritosSanJoseSantaAna = ["Santa\bAna","Salitral","Pozos","Uruca","Piedades","Brasil"];
+    var distritosSanJoseAlajuelita = ["Alajuelita","San\bJosecito","San\bAntonio","Concepción","San\bFelipe"];
+    var distritosSanJoseVazquez = ["San\bIsidro","San\bRafael","Dulce\bNombre\bde\bJesús","Patalillo","Cascajal"];
+    var distritosSanJoseAcosta = ["San\bIgnacio","Guaitil","Palmichal","Cangrejal","Sabanillas"];
+    var distritosSanJoseTibas = ["San\bJuan","Cinco\bEsquinas","Anselmo\bLlorente","Leon\bXIII","Colima"];
+    var distritosSanJoseMoravia = ["San\bVicente","San\bJerónimo","Trinidad"];
+    var distritosSanJoseMontesdeOca = ["San\bPedro","Sabanilla","Mercedes","San\bRafael"];
+    var distritosSanJoseTurrubares = ["San\bPablo","San\bPedro","San\bJuan\bde\bMata","San\bLuis","Carara"];
+    var distritosSanJoseDota = ["Santa\bMaría","Jardín","Copey"];
     var distritosSanJoseCurridabat = ["Curridabat","Granadilla","Sánchez","Tirrases"];
-    var distritosSanJosePerez = ["San Isidro del General","El General","Daniel Flores","Rivas","San Pedro","Platanares","Pejibaye","Cajón","Barú","Rio Nuevo","Páramo"];
-    var distritosSanJoseLeon = ["San Pablo","San Andrés","Llano Bonito","San Isidro","Santa Cruz","San Antonio"];
+    var distritosSanJosePerez = ["San\bIsidro\bdel\bGeneral","El\bGeneral","Daniel\bFlores","Rivas","San\bPedro","Platanares","Pejibaye","Cajón","Barú","Rio\bNuevo","Páramo"];
+    var distritosSanJoseLeon = ["San\bPablo","San\bAndrés","Llano\bBonito","San\bIsidro","Santa\bCruz","San\bAntonio"];
     
     
     
-    var distritosAlajuela = ["Alajuela","San José","Carrizal","San Antonio","Guácima","San Isidro","Sabanilla","San Rafael","Río Segundo","Desamparados","Turrúcares","Tambor","Garita","Sarapiquí"];
-    var distritosAlajuelaSanRamon = ["San Ramón","Santiago","San Juan","Piedades Norte","Piedades Sur","San Rafael","San Isidro","Ángeles","Alfaro","Volio","Cobcepción","Zapotal","Peñas Blancas"];
-    var distritosAlajuelaGrecia = ["Grecia","San Isidro","San José","San Roque","Tacares","Río Cuarto","Puente de Piedra","Bolivar"];
-    var distritosAlajuelaSanMateo = ["San Mateo","Desmonte","Jeśus María"];
-    var distritosAlajuelaAtenas = ["Atenas","Jesús","Mercedes","San Isidro","Concepción","San José","Santa Eulalia","Escobal"];
-    var distritosAlajuelaNaranjo = ["Naranjo","San Miguel","San José","Cirrí Sur","San Jéronimo","San Juan","El Rosario","Palmitos"];
-    var distritosAlajuelaPalmares = ["Palmares","Zaragoza","Buenos Aires","Santiago","Candelaria","Esquipulas","La Granja"];
-    var distritosAlajuelaPoas = ["San Pedro","San Juan","San Rafael","Carrillos","Sabana Redonda"];
-    var distritosAlajuelaOrotina = ["Orotina","Mastate","Hacienda Vieja","Coyolar","La Ceiba"];
-    var distritosAlajuelaSanCarlos = ["Quesada","Florencia","Buenavista","Aguas Zarcas","Venecia","Pital","La Fortuna","La Tigra","La Palmera","Venado","Cutris","Monterrey","Pocosol"];
+    var distritosAlajuela = ["Alajuela","San\bJosé","Carrizal","San\bAntonio","Guácima","San\bIsidro","Sabanilla","San\bRafael","Río\bSegundo","Desamparados","Turrúcares","Tambor","Garita","Sarapiquí"];
+    var distritosAlajuelaSanRamon = ["San\bRamón","Santiago","San\bJuan","Piedades\bNorte","Piedades\bSur","San\bRafael","San\bIsidro","Ángeles","Alfaro","Volio","Cobcepción","Zapotal","Peñas\bBlancas"];
+    var distritosAlajuelaGrecia = ["Grecia","San Isidro","San José","San Roque","Tacares","Río Cuarto","Puente\bde\bPiedra","Bolivar"];
+    var distritosAlajuelaSanMateo = ["San\bMateo","Desmonte","Jeśus María"];
+    var distritosAlajuelaAtenas = ["Atenas","Jesús","Mercedes","San\bIsidro","Concepción","San\bJosé","Santa\bEulalia","Escobal"];
+    var distritosAlajuelaNaranjo = ["Naranjo","San\bMiguel","San\bJosé","Cirrí\bSur","San\bJéronimo","San\bJuan","El\bRosario","Palmitos"];
+    var distritosAlajuelaPalmares = ["Palmares","Zaragoza","Buenos\bAires","Santiago","Candelaria","Esquipulas","La\bGranja"];
+    var distritosAlajuelaPoas = ["San\bPedro","San\bJuan","San\bRafael","Carrillos","Sabana\bRedonda"];
+    var distritosAlajuelaOrotina = ["Orotina","Mastate","Hacienda\bVieja","Coyolar","La\bCeiba"];
+    var distritosAlajuelaSanCarlos = ["Quesada","Florencia","Buenavista","Aguas Zarcas","Venecia","Pital","La\bFortuna","La\bTigra","La\bPalmera","Venado","Cutris","Monterrey","Pocosol"];
     var distritosAlajuelaZarcero = ["Zarcero","Laguna","Tapezco","Guadalupe","Palmira","Zapote","Brisas"];
-    var distritosAlajuelaValverdeVega = ["Sarchí Norte","Sarchí Sur","Toro Amarillo","San Pedro","Rodriguez"];
-    var distritosAlajuelaUpala = ["Upala","Aguas Claras","San José","Bijagua","Delicias","Dos Ríos","Yolillal"];
-    var distritosAlajuelaLosChiles = ["Los Chiles","Caño Negro","El Amparo","San Jorge"];
-    var distritosAlajuelaGuatuso = ["San Rafael","Buenavista","Cote","Katira"];
+    var distritosAlajuelaValverdeVega = ["Sarchí\bNorte","Sarchí\bSur","Toro\bAmarillo","San\bPedro","Rodriguez"];
+    var distritosAlajuelaUpala = ["Upala","Aguas\bClaras","San\bJosé","Bijagua","Delicias","Dos Ríos","Yolillal"];
+    var distritosAlajuelaLosChiles = ["Los\bChiles","Caño\bNegro","El\bAmparo","San\bJorge"];
+    var distritosAlajuelaGuatuso = ["San\bRafael","Buenavista","Cote","Katira"];
     
     
     
-    var distritosCartago = ["Oriental","Occidental","Carmen","San Nicolás","Agua Caliente","Guadalupe","Corralillo","Tierra Blanca","Dulce Nombre","Llano Grande","Quebradilla"];
-    var distritosCartagoParaiso = ["Paraíso","Santiago de Paraíso","Orosi","Cachí","Llanos de Santa Lucía"];
-    var distritosCartagoLaUnion = ["Tres Ríos","San Diego","San Juan","San Rafael","Concepción","Dulce Nombre","San Ramón","Río Azul"];
-    var distritosCartagoJimenez = ["Juan Viñas","Tucurrique","Pejibaye"];
-    var distritosCartagoTurrialba = ["Turrialba","La Suiza","Peralta","Santa Cruz","Santa Teresita","Pavones","Tuis","Tayutic","Santa Rosa","Tres Equis","La Isabel","Chirripó"];
+    var distritosCartago = ["Oriental","Occidental","Carmen","San\bNicolás","Agua\bCaliente","Guadalupe","Corralillo","Tierra\bBlanca","Dulce\bNombre","Llano\bGrande","Quebradilla"];
+    var distritosCartagoParaiso = ["Paraíso","Santiago\bde\bParaíso","Orosi","Cachí","Llanos\bde\bSanta\bLucía"];
+    var distritosCartagoLaUnion = ["Tres\bRíos","San\bDiego","San\bJuan","San\bRafael","Concepción","Dulce\bNombre","San\bRamón","Río\bAzul"];
+    var distritosCartagoJimenez = ["Juan\bViñas","Tucurrique","Pejibaye"];
+    var distritosCartagoTurrialba = ["Turrialba","La\bSuiza","Peralta","Santa\bCruz","Santa\bTeresita","Pavones","Tuis","Tayutic","Santa\bRosa","Tres\bEquis","La\bIsabel","Chirripó"];
     var distritosCartagoAlvarado = ["Pacayas","Cervantes","Capellades"];
-    var distritosCartagoOreamuno = ["San Rafael","Cot","Potrero Cerrado","Cipreses","Santa Rosa"];
-    var distritosCartagoElGuarco = ["Tejar","San Isidro","Tobosi","Patio de Agua"];
+    var distritosCartagoOreamuno = ["San\bRafael","Cot","Potrero\bCerrado","Cipreses","Santa\bRosa"];
+    var distritosCartagoElGuarco = ["Tejar","San\bIsidro","Tobosi","Patio\bde\bAgua"];
     
     
     
-    var distritosHeredia = ["Heredia","Mercedes","San Francisco","Ulloa","Varablanca"];
-    var distritosHerediaBarva = ["Barva","San Pedro","San Pablo","San Roque","Santa Lucía","San José de la Montaña"];
-    var distritosHerediaSantoDomingo = ["Santo Domingo","San Vicente","San Miguel","Paracito","Santo Tomás","Santa Rosa","Tures","Pará"];
-    var distritosHerediaSantaBarbara = ["Santa Bárbara","San Pedro","San Juan","Jesús","Santo Domingo","Purabá"];
-    var distritosHerediaSanRafael = ["San Rafael","San Jocecito","Santiago","Ángeles","Concepción"];
-    var distritosHerediaSanIsidro = ["San Isidro","San José","Concepción","San Francisco"];
-    var distritosHerediaBelen = ["San Antonio", "La Rivera","La Asunción"];
-    var distritosHerediaFlores = ["San Joaquín", "Barrantes","Llorente"];
-    var distritosHerediaSanPablo = ["San Pablo","Rincón de Sabanilla"];
-    var distritosHerediaSarapiqui = ["Puerto Viejo","La Virgen","Las Horquetas","Llanuras del Gaspar","Cureña"];
+    var distritosHeredia = ["Heredia","Mercedes","San\bFrancisco","Ulloa","Varablanca"];
+    var distritosHerediaBarva = ["Barva","San\bPedro","San\bPablo","San\bRoque","Santa\bLucía","San\bJosé\bde\bla\bMontaña"];
+    var distritosHerediaSantoDomingo = ["Santo\bDomingo","San\bVicente","San\bMiguel","Paracito","Santo\bTomás","Santa\bRosa","Tures","Pará"];
+    var distritosHerediaSantaBarbara = ["Santa\bBárbara","San\bPedro","San\bJuan","Jesús","Santo\bDomingo","Purabá"];
+    var distritosHerediaSanRafael = ["San\bRafael","San\bJocecito","Santiago","Ángeles","Concepción"];
+    var distritosHerediaSanIsidro = ["San\bIsidro","San\bJosé","Concepción","San\bFrancisco"];
+    var distritosHerediaBelen = ["San\bAntonio", "La\bRivera","La\bAsunción"];
+    var distritosHerediaFlores = ["San\bJoaquín", "Barrantes","Llorente"];
+    var distritosHerediaSanPablo = ["San\bPablo","Rincón\bde\bSabanilla"];
+    var distritosHerediaSarapiqui = ["Puerto\bViejo","La\bVirgen","Las\bHorquetas","Llanuras\bdel\bGaspar","Cureña"];
     
     
-    var distritosGuanacasteLiberia = ["Liberia","Cañas Dulces","Mayorga","Nacascolo","Curubandé"];
-    var distritosGuanacasteNicoya = ["Nicoya","Mansión","San Antonio","Quebrada Onda","Sámara","Nosara","Belén de Nosarita"];
-    var distritosGuanacasteSantaCruz = ["Santa Cruz","Bolsón","Ventisiete de Abril","Tempate","Cartagena","Cuajiniquil","Diriá","Cabo Velas","Tamarindo"];
-    var distritosGuanacasteBagaces = ["Bagaces","La Fortuna","Mogote","Río Naranjo"];
+    var distritosGuanacasteLiberia = ["Liberia","Cañas\bDulces","Mayorga","Nacascolo","Curubandé"];
+    var distritosGuanacasteNicoya = ["Nicoya","Mansión","San\bAntonio","Quebrada\bOnda","Sámara","Nosara","Belén\bde\bNosarita"];
+    var distritosGuanacasteSantaCruz = ["Santa\bCruz","Bolsón","Ventisiete\bde\bAbril","Tempate","Cartagena","Cuajiniquil","Diriá","Cabo\bVelas","Tamarindo"];
+    var distritosGuanacasteBagaces = ["Bagaces","La\bFortuna","Mogote","Río\bNaranjo"];
     var distritosGuanacasteCarrillo = ["Filadelfia","Palmira","Sardinal","Belén"];
-    var distritosGuanacasteCanas = ["Cañas","Palmira","San Miguel","Bebedero","Porozal"];
-    var distritosGuanacasteAbangares = ["Las Juntas","Sierra","San Juan","Colorado"];
-    var distritosGuanacasteTilaran = ["Tilarán","Quebrada Grande","Tronadora","Santa Rosa","Libano","Tierras Morenas","Arenal"];
-    var distritosGuanacasteNandayure = ["Carmona","Santa Rita","Zapotal","San Pablo","Porvenir"];
-    var distritosGuanacasteLaCruz = ["La Cruz","Santa Cecilia","La Garita","Santa Elena"];
-    var distritosGuanacasteHojancha = ["Hojancha","Monte Romo","Puerto Crarrillo","Huacas"];
+    var distritosGuanacasteCanas = ["Cañas","Palmira","San\bMiguel","Bebedero","Porozal"];
+    var distritosGuanacasteAbangares = ["Las\bJuntas","Sierra","San\bJuan","Colorado"];
+    var distritosGuanacasteTilaran = ["Tilarán","Quebrada\bGrande","Tronadora","Santa\bRosa","Libano","Tierras\bMorenas","Arenal"];
+    var distritosGuanacasteNandayure = ["Carmona","Santa\bRita","Zapotal","San\bPablo","Porvenir"];
+    var distritosGuanacasteLaCruz = ["La\bCruz","Santa\bCecilia","La\bGarita","Santa\bElena"];
+    var distritosGuanacasteHojancha = ["Hojancha","Monte\bRomo","Puerto\bCrarrillo","Huacas"];
     
     
-    var distritosPuntarenas = ["Puntarenas","Pitahaya","Chomes","Lepanto","Paquera","Manzanillo","Guacimal","Barranca","Monteverde","Isla del Coco","Cóbano","Chacarita","Chira","Acapulco","El Roble","Arancibia"];
-    var distritosPuntarenasEsparza = ["Espiritu Santo","San Juan  Grande","Macacona","San Rafael","San Jerónimo"];
-    var distritosPuntarenasBuenosAires = ["Buenos Aires","Volcán","Potrero Grande","Boruca","Pilas","Colinas","Chánguena","Biolley","Brunka"];
-    var distritosPuntarenasMontesdeOro = ["Miramar","La Unión","San Isidro"];
-    var distritosPuntarenasOsa = ["Cortés","Palmar","Sierpe","Bahia Ballena","Piedras Blancas"];
+    var distritosPuntarenas = ["Puntarenas","Pitahaya","Chomes","Lepanto","Paquera","Manzanillo","Guacimal","Barranca","Monteverde","Isla\bdel\bCoco","Cóbano","Chacarita","Chira","Acapulco","El\bRoble","Arancibia"];
+    var distritosPuntarenasEsparza = ["Espiritu\bSanto","San\bJuan\bGrande","Macacona","San\bRafael","San\bJerónimo"];
+    var distritosPuntarenasBuenosAires = ["Buenos\bAires","Volcán","Potrero\bGrande","Boruca","Pilas","Colinas","Chánguena","Biolley","Brunka"];
+    var distritosPuntarenasMontesdeOro = ["Miramar","La\bUnión","San\bIsidro"];
+    var distritosPuntarenasOsa = ["Cortés","Palmar","Sierpe","Bahia\bBallena","Piedras\bBlancas"];
     var distritosPuntarenasQuepos = ["Quepos","Savegre","Naranjito"];
-    var distritosPuntarenasGolfito = ["Golfito","Puerto Jiménez","Guaycará","Pavón"];
-    var distritosPuntarenasCotoBrus = ["San Vito","Sabalito","Aguabuena","Limoncito","Pittier"];
+    var distritosPuntarenasGolfito = ["Golfito","Puerto\bJiménez","Guaycará","Pavón"];
+    var distritosPuntarenasCotoBrus = ["San\bVito","Sabalito","Aguabuena","Limoncito","Pittier"];
     var distritosPuntarenasParrita = ["Parrita"];
-    var distritosPuntarenasCorredores = ["Corredor","La Cuesta","Paso Canoas","Laurel"];
+    var distritosPuntarenasCorredores = ["Corredor","La\bCuesta","Paso\bCanoas","Laurel"];
     var distritosPuntarenasGarabito = ["Jacó","Tárcoles"];
     
     
-    var distritosLimon = ["Limón","Valle la Estrella","Río Blanco","Matama"];
+    var distritosLimon = ["Limón","Valle\bla\bEstrella","Río\bBlanco","Matama"];
     var distritosLimonPococi = ["Guápiles","Jiménez","Rita","Roxana","Cariari","Colorado"];
     var distritosLimonSiquirres = ["Siquirres","Pacuarito","Florida","Germania","Cairo","Alegría"];
     var distritosLimonTalamanca = ["Bratsi","Sixaola","Cahuita","Telire"];
     var distritosLimonMatina = ["Matina","Batán","Carrandi"];
-    var distritosLimonGuacimo = ["Guácimo","Mercedes","Pocora","Río Jiménez","Duacarí"];
+    var distritosLimonGuacimo = ["Guácimo","Mercedes","Pocora","Río\bJiménez","Duacarí"];
     
     if( cantonSeleccionado=="San\bJose"){
       for(var i=0;i < distritosSanJose.length;i++ ) {
