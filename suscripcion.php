@@ -53,6 +53,11 @@ and open the template in the editor.
 	</div>
 </div>
 <p class="slide">
+    <div style="text-aling:center;" id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<a href="#" class="btn-slide"></a>
 </p>
 <!-- HEADER
@@ -127,7 +132,8 @@ and open the template in the editor.
 	<!-- CONTACT FORM -->
 	<div class="twelve columns">
 		<div class="wrapcontact">
-                    <h5>Formulario de suscripci&oacute;n</h5>
+                    <h5>Formulario de suscripci&oacute;n</h5><br>
+                    <h5>Si olvid&oacute; el numero de su casillero, favor dir&iacute;jase al siguiente link (<a href="contact.html">Enviar Mensaje</a>), envienos un mensaje con su correo electr&oacute;nico y n&uacute;mero de identificaci&oacute;n con el asunto: "Olvid&eacute; mi casillero".  </h5>
 			<div class="done">
 				<div class="alert-box success">
                                     Suscripci&oacute;n exitosa! <a href="" class="close">x</a>
