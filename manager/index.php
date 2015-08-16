@@ -44,10 +44,7 @@
                     <h2>Login</h2>
                     <p><input type="text" maxlength="30" required autofocus name="username" /></p>
                     <p><input type="password" maxlength="30" required name="password" /></p>
-                    <label for="remember">
-                        <input type="checkbox" id="remember" value="remember" />
-                        <span>Remember me on this computer</span>
-                    </label>
+                    
                     <button type="submit" value='login' name='login'></button>
                 </form>
             </div>

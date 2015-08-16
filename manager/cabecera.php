@@ -3,7 +3,7 @@
 session_start();
 
 if (empty($_SESSION['user_session'])) {
-    header("Location:index.php");
+   echo '<script> window.location.replace("../manager/index.php")</script>'; 
 }
 include_once("config.php");
 ?> 
@@ -79,7 +79,7 @@ include_once("config.php");
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php $vUser_session = $_SESSION['user_session'];
 echo $vUser_session; ?><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            
+                           
                             <li class="divider"></li>
                             <li>
                                 <a href="logOut.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
@@ -101,10 +101,10 @@ echo $vUser_session; ?><b class="caret"></b></a>
                             
                         </li>
                         <li>
-                            <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Crea usuario Admin</a>
+                            <a href="regUsuAdmin.php"><i class="fa fa-fw fa-desktop"></i> Crea usuario Admin</a>
                         </li>
                         <li>
-                            <a href="sysusers.php"><i class="fa fa-fw fa-wrench"></i> Mant usuario Admin</a>
+                            <a href="sysusers.php"><i class="fa fa-fw fa-wrench"></i> Mant.Usuario Admin</a>
                         </li>
 
                     </ul>

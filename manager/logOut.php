@@ -5,11 +5,9 @@
  try {
     session_destroy();
  }catch (Exception $e) {
+    echo '<script> window.location.replace("../manager/index.php")</script>'; 
     echo 'Excepción capturada: ',  $e->getMessage(), "\n";
-} finally {
-    echo '<script> window.location.replace("../manager/index.php")</script>';  
-     
 }
- echo '<script> window.location.replace("../manager/index.php")</script>';     
+ echo '<script> window.location.replace("../manager/index.php")</script>'; 
  
 
